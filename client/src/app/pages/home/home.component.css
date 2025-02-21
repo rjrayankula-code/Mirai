@@ -1,0 +1,418 @@
+body {
+  /* General Page Styling */
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Header */
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  display: flex;
+  justify-content: space-between; /* Space between elements */
+  align-items: center;
+  padding: 0 10px;
+}
+
+
+/*Header Icons */
+.header-icons {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  position: absolute; /* Position the icons inside header */
+  right: 60px; /* Align icons to the right */
+  z-index: 1052;
+}
+
+.header-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Brush Script MT', cursive;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1052;
+  max-width: calc(100% - 120px); /* Leave space for other elements */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 30px;
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.2rem;
+  }
+}
+
+/*.header-icons {*/
+/*  gap: 1rem;*/
+/*  font-size: 1.2rem;*/
+/*}*/
+
+.page-header {
+  padding: 0 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Navbar Links (Initially hidden for small screens) */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding-left: 0;
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  padding: 10px 20px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-links li a:hover {
+  color: #007bff;
+}
+
+/* Mobile view - Hide links by default */
+.navbar-links {
+  display: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Hamburger button styles */
+.navbar-toggler {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.navbar-toggler span {
+  color: #333;
+}
+
+/* Adjust navbar links for active state */
+.navbar-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;  /* Adjust this based on the header height */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1050;  /* Ensure it's above other content */
+}
+
+/* Add padding/margin to the body content when menu is open */
+.container {
+  margin-top: 0px; /* Adjust this value to accommodate the header height + menu */
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #555555;
+  margin-top: auto;
+}
+
+
+img {
+  /*max-width: 100%; !* Make the image responsive *!*/
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100px; /* You can adjust this value based on your needs */
+  margin-top: -40px;
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center; /* Center the entire hero section */
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.hero-image {
+  flex: 1; /* Ensures equal width */
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-image.image-1 {
+  background-image: url('/assets/images/p1.jpg');
+}
+
+/* Second Image */
+.hero-image.image-2 {
+  background-image: url('/assets/images/p2.jpg');
+}
+
+
+.hero-images {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center; /* Ensures images stay centered */
+  align-items: center;
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 3rem; /* Large font size for the heading */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem; /* Subheading text size */
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  font-size: 1.1rem;
+  padding: 15px 30px;
+  background-color: whitesmoke; /* Primary color */
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: burlywood; /* Darken on hover */
+}
+
+
+/* Center the headings */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Center-align the list items */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center; /* Ensuring list items are centered */
+}
+
+@media (max-width: 768px) {
+  .hero-images {
+    flex-direction: column;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 50%;
+  }
+
+  .hero-content {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+  }
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto; /* Centers the container */
+  max-width: 900px; /* Limits width for readability */
+  padding: 10px;
+  font: normal 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+}
+
+.centered-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font: normal 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+}
+
+.centered-container li {
+  margin-bottom: 10px;
+  font: normal 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+}
+
+.centered-container h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font: bold 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 46px;
+}
+
+/* Services Section */
+.services-section {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust as needed */
+  /*background: url('/assets/images/p3.jpg') no-repeat center center/cover;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align text to the left */
+  padding: 50px;
+  color: black;
+  overflow: hidden;
+}
+
+/*.services-section::after {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 50%; !* Start from center *!*/
+/*  width: 50%; !* Cover right half *!*/
+/*  height: 100%;*/
+/*  background: url('/assets/images/p3.jpg') no-repeat center right/cover;*/
+/*  z-index: -1;*/
+/*}*/
+
+
+/* Text Content */
+.services-content {
+  flex: 1;
+  max-width: 50%;
+  padding: 40px;
+  /*background: rgba(255, 255, 255, 0.8); !* Light background to improve readability *!*/
+  border-radius: 10px;
+  text-align: left;
+}
+.services-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .services-section {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .services-section::after {
+    left: 0;
+    width: 100%; /* Image will cover the full background on smaller screens */
+  }
+
+  .services-content {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.7); /* Slightly stronger background for mobile */
+  }
+}
+
+a[routerLink],
+button {
+  pointer-events: auto; /* Ensure elements are interactive */
+  cursor: pointer;      /* Add visual feedback for clicks */
+}
+.navbar-links {
+  position: relative;
+  z-index: 10; /* Make sure links are on top */
+}
+
+
+

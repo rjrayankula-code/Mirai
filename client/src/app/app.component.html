@@ -1,0 +1,131 @@
+<!--&lt;!&ndash; Page Header with Icons &ndash;&gt;-->
+<!--<div *ngIf="showMainLayout">-->
+<!--<header class="page-header">-->
+<!--  &lt;!&ndash; Header Container &ndash;&gt;-->
+<!--  <div class="header-container">-->
+<!--    <div class="header-title">mirai</div>-->
+<!--    <div class="header-icons">-->
+<!--      <i class="fas fa-search"></i>-->
+<!--      <i class="fas fa-user"></i>-->
+<!--      <i class="fas fa-shopping-cart"></i>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Navbar with Custom Toggle &ndash;&gt;-->
+<!--  <nav class="navbar">-->
+<!--    <button class="navbar-toggler" (click)="toggleNavbar()">-->
+<!--      <span>&#9776;</span> &lt;!&ndash; Hamburger icon &ndash;&gt;-->
+<!--    </button>-->
+
+<!--    <div class="navbar-links" [ngClass]="{'active': isNavbarOpen}">-->
+<!--      <ul>-->
+<!--        <li><a href="/home">Home</a></li>-->
+<!--        <li><a routerLink="/about">About</a></li>-->
+<!--        <li><a href="/services">Services</a></li>-->
+<!--        <li><a href="/resources">Resources</a></li>-->
+<!--        <li><a routerLink="/get-in-touch">Get In Touch</a></li>-->
+
+
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </nav>-->
+<!--</header>-->
+
+<!--&lt;!&ndash; Hero Section &ndash;&gt;-->
+<!--<section class="hero">-->
+<!--  <div class="hero-images">-->
+<!--    &lt;!&ndash; First Image &ndash;&gt;-->
+<!--    <div class="hero-image image-1"></div>-->
+
+<!--    &lt;!&ndash; Second Image &ndash;&gt;-->
+<!--    <div class="hero-image image-2"></div>-->
+
+<!--  <div class="hero-content">-->
+<!--    <h1>Welcome to <span class="highlighted">Mirai</span> Pediatric Therapy</h1>-->
+<!--    <p>Helping children thrive with expert therapy and personalized care.</p>-->
+<!--    <a href="/contact" class="cta-button">Book a Consultation</a>-->
+<!--  </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<!--&lt;!&ndash; Main Content (below the Hero Section) &ndash;&gt;-->
+<!--<div class="container mt-5 pt-5">-->
+<!--  <div class="row align-items-center">-->
+<!--    <div class="centered-container">-->
+<!--      <p>At <strong>Mirai Pediatric Therapy</strong>, we believe that every child has the potential to thrive. Our mission is to provide individualized therapy that fosters development and enhances the everyday skills of children. Through compassionate guidance and evidence-based strategies, we help children build confidence and overcome challenges, enabling them to lead happier, more independent lives.</p>-->
+
+<!--      <p>Whether you're looking for support with motor skills, sensory processing, or cognitive development, our expert team is here to help. We offer a warm, welcoming environment where your child can feel comfortable and supported every step of the way.</p>-->
+
+<!--      <h2>Our Services Include:</h2>-->
+<!--      <ul>-->
+<!--        <li><strong>Individualized Therapy Plans</strong>: Tailored to your child's unique needs.</li>-->
+<!--        <li><strong>Motor Skills Development</strong>: Helping children improve their coordination and strength.</li>-->
+<!--        <li><strong>Sensory Processing Support</strong>: Teaching children how to process and respond to sensory information.</li>-->
+<!--        <li><strong>Cognitive Development</strong>: Providing strategies to enhance problem-solving and learning abilities.</li>-->
+<!--      </ul>-->
+
+<!--      <h2>Why Choose Us?</h2>-->
+<!--      <ul>-->
+<!--        <li><strong>Expert Therapists</strong>: Our team is trained in the latest therapeutic techniques and approaches.</li>-->
+<!--        <li><strong>Personalized Care</strong>: Every child is unique, and so is our approach.</li>-->
+<!--        <li><strong>Flexible Scheduling</strong>: We offer convenient hours to fit your family’s busy schedule.</li>-->
+<!--      </ul>-->
+
+<!--      <p>If you're ready to take the next step in supporting your child's development, <strong>contact us today</strong> and schedule your consultation.</p>-->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<router-outlet></router-outlet>-->
+
+<!--<footer>-->
+<!--  Designed Boho Theme for MIRAI-->
+<!--</footer>-->
+<!--</div>-->
+
+<!--<div *ngIf="!showMainLayout">-->
+<!--  <router-outlet></router-outlet>-->
+<!--</div>-->
+
+<div *ngIf="showMainLayout">
+  <header class="page-header">
+    <!-- Header content -->
+    <div class="header-container">
+      <div class="header-title">mirai</div>
+      <div class="header-icons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-user"></i>
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <button class="navbar-toggler" (click)="toggleNavbar()">
+        <span>&#9776;</span>
+      </button>
+      <div class="navbar-links" [ngClass]="{'active': isNavbarOpen}">
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <li><a routerLink="/services">Services</a></li>
+          <li><a routerLink="/resources">Resources</a></li>
+          <li><a routerLink="/get-in-touch">Get In Touch</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Routed content will render here -->
+  <router-outlet></router-outlet>
+
+<!--  <footer>-->
+<!--    Designed Boho Theme for MIRAI-->
+<!--  </footer>-->
+</div>
+
+<div *ngIf="!showMainLayout">
+  <router-outlet></router-outlet>
+</div>
+
