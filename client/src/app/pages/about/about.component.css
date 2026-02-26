@@ -1,60 +1,30 @@
-/*container {*/
-/*  max-width: 500px;*/
-/*  margin: auto;*/
-/*  padding: 40px 20px;*/
-/*}*/
 .about {
-  background-color: #C4B7A6; /* Soft background */
-  padding: 90px;
-  min-height: 10vh;
-  font-family: 'Poppins', sans-serif; /* Modern font */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  /*margin-top: auto; !* Pushes content below the header *!*/
-  /*margin-bottom: 1vh;*/
-
+  background-color: #C4B7A6;
+  min-height: calc(100vh - 100px);
+  padding: 60px 20px;
 }
 
-/*.text-section {*/
-/*  text-align: left;*/
-/*  margin-bottom: 30px;*/
-/*}*/
+.about-container {
+  max-width: 860px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #222;
+}
 
-/*.form-container {*/
-/*  background-color: #8FA1B3;*/
-/*  padding: 40px;*/
-/*  border-radius: 10px;*/
-/*  color: white;*/
-/*}*/
+.about-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #111;
+}
 
-/*.form-container h3 {*/
-/*  font-size: 1.5rem;*/
-/*  font-weight: bold;*/
-/*  text-align: left;*/
-/*}*/
+.about-container p {
+  margin-bottom: 18px;
+}
 
-/*.subtext {*/
-/*  font-size: 0.9rem;*/
-/*  margin-bottom: 20px;*/
-/*}*/
-
-/*label {*/
-/*  font-weight: bold;*/
-/*  margin-top: 10px;*/
-/*}*/
-
-/*.checkbox-group {*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  gap: 5px;*/
-/*}*/
-
-/*.form-control {*/
-/*  width: 100%;*/
-/*  padding: 10px;*/
-/*  margin-bottom: 10px;*/
-/*  border-radius: 5px;*/
-/*  border: 1px solid #ddd;*/
-/*}*/
+.signature {
+  margin-top: 32px;
+  font-size: 1rem;
+}

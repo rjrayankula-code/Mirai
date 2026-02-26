@@ -1,7 +1,17 @@
-
-body{
-  /*background-color: #9CAF88;*/
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  height: 100vh;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+}
+
+/* Force all routed page components to render as block elements */
+app-home,
+app-about,
+app-get-in-touch {
+  display: block;
 }

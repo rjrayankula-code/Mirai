@@ -1,423 +1,153 @@
-
-/*.get-in-touch-container {*/
-/*  background-color: #f5f5f5; !* Soft background *!*/
-/*  padding: 40px;*/
-/*  min-height: auto;*/
-/*  font-family: 'Poppins', sans-serif; !* Modern font *!*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*  align-items: center;*/
-/*  flex-direction: column;*/
-/*  margin-top: 100px; !* Pushes content below the header *!*/
-/*  margin-bottom: auto;*/
-
-/*}*/
-
-/*.get-in-touch-section {*/
-/*  background-color: #fdfaf6; !* Soft off-white background *!*/
-/*  padding: 40px;*/
-/*  text-align: left;*/
-/*  max-width: 900px;*/
-/*  margin: auto;*/
-/*  font-family: 'Poppins', sans-serif; !* Modern, clean font *!*/
-/*}*/
-
-/*.get-in-touch-section h1 {*/
-/*  font-size: 2rem;*/
-/*  font-weight: bold;*/
-/*  color: #2c2c2c;*/
-/*  margin-bottom: 20px;*/
-/*}*/
-
-/*.get-in-touch-section p {*/
-/*  font-size: 1.1rem;*/
-/*  color: #555;*/
-/*  line-height: 1.6;*/
-/*  margin-bottom: 15px;*/
-/*}*/
-
-/*.get-in-touch-section em {*/
-/*  color: #444;*/
-/*}*/
-
-/*form {*/
-/*  background: #9CAF88;*/
-/*  padding: 30px;*/
-/*  border-radius: 10px;*/
-/*  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); !* Soft shadow *!*/
-/*  width: 800px;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  margin-top: 20px; !* Additional spacing for better alignment *!*/
-/*}*/
-
-h1 {
-  color: #000;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-p {
-  color: #000;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-}
-
-/*.form-container {*/
-/*  background: #9CAF88;*/
-/*  padding: 30px;*/
-/*  border-radius: 10px;*/
-/*  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); !* Soft shadow *!*/
-/*  width: 90%;*/
-/*  max-width: 800px;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  margin-top: 20px;*/
-/*}*/
-
-/*form label {*/
-/*  font-weight: 600;*/
-/*  color: #000;*/
-/*  margin-top: 10px;*/
-/*  font-size: 1rem;*/
-/*}*/
-
-/*input, textarea {*/
-/*  width: 100%;*/
-/*  padding: 12px;*/
-/*  margin-top: 5px;*/
-/*  border-radius: 5px;*/
-/*  border: 1px solid #ccc;*/
-/*  font-size: 1rem;*/
-/*  font-family: 'Poppins', sans-serif;*/
-/*}*/
-
-/*textarea {*/
-/*  height: 100px;*/
-/*}*/
-
-/*.form-check {*/
-/*  margin-bottom: 10px;*/
-/*}*/
-
-/*.form-check-label {*/
-/*  font-size: 1rem;*/
-/*  color: #2c2c2c;*/
-/*  font-weight: 500;*/
-/*}*/
-
-button {
-  background-color: #009688; /* Stylish green */
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: background 0.3s ease;
-}
-/*button:hover {*/
-/*  background-color: #00796B;*/
-/*}*/
-/*button:hover {*/
-/*  background-color: #00796B;*/
-/*}*/
-
-.page-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  background-color: white;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1050;
-  display: flex;
-  justify-content: space-between; /* Space between elements */
-  align-items: center;
-  padding: 0 10px;
-}
-
-
-/*!*Header Icons *!*/
-.header-icons {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 1.5rem;
-  position: absolute; /* Position the icons inside header */
-  right: 60px; /* Align icons to the right */
-  z-index: 1052;
-}
-
-.header-title {
-  font-size: 3.5rem;
-  font-weight: bold;
-  font-family: 'Brush Script MT', cursive;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1052;
-  max-width: calc(100% - 120px); /* Leave space for other elements */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  top: 30px;
-}
-
-/*@media (max-width: 768px) {*/
-/*  .header-title {*/
-/*    font-size: 1.5rem;*/
-/*  }*/
-/*}*/
-
-/*@media (max-width: 480px) {*/
-/*  .header-title {*/
-/*    font-size: 1.2rem;*/
-/*  }*/
-/*}*/
-
-.header-icons {
-  gap: 1rem;
-  font-size: 1.2rem;
-}
-
-.page-header {
-  padding: 0 10px;
-}
-
-/*!* Navbar Styles *!*/
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  position: relative;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-/* Navbar Links (Initially hidden for small screens) */
-.navbar-links {
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding-left: 0;
-}
-
-.navbar-links ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li {
-  padding: 10px 20px;
-}
-
-.navbar-links li a {
-  text-decoration: none;
-  color: #333;
-}
-
-.navbar-links li a:hover {
-  color: #007bff;
-}
-
-/* Mobile view - Hide links by default */
-.navbar-links {
-  display: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-/* Hamburger button styles */
-.navbar-toggler {
-  background: none;
-  border: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.navbar-toggler span {
-  color: #333;
-}
-
-/*!* Adjust navbar links for active state *!*/
-.navbar-links.active {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 70px;  /* Adjust this based on the header height */
-  left: 0;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1050;  /* Ensure it's above other content */
-}
-
-/*!* Add padding/margin to the body content when menu is open *!*/
-/*.container {*/
-/*  margin-top: 0px; !* Adjust this value to accommodate the header height + menu *!*/
-/*  padding: 20px;*/
-/*}*/
-
-/*!* Footer *!*/
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 16px;
-  color: #555555;
-  margin-top: auto;
-}
-
-/* Container Styling */
-.get-in-touch-container {
-  background-color: #f5f5f5; /* Soft background */
-  padding: 40px;
-  min-height: auto;
-  font-family: 'Poppins', sans-serif; /* Modern font */
+.get-in-touch-section {
+  background: #f5f5f5;
+  min-height: calc(100vh - 100px);
+  padding: 60px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 100px; /* Pushes content below the header */
 }
 
-.get-in-touch-container h1 {
-  text-align: center;
-  font-size: 2.5rem; /* Adjust size as needed */
-  font-weight: bold;
-  font-family: 'Playfair Display', serif; /* Change the font */
-}
-
-/* Form Section */
-.get-in-touch-section {
-  background-color: #fdfaf6; /* Soft off-white background */
+.form-card {
+  background: #E6D5BE;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   padding: 40px;
-  text-align: left;
-  max-width: 900px;
-  margin: auto;
-  font-family: 'Poppins', sans-serif; /* Modern, clean font */
+  width: 100%;
+  max-width: 780px;
+  height: fit-content;
 }
 
-/* Headings */
-.get-in-touch-section h1 {
+.form-card h1 {
   font-size: 2rem;
-  font-weight: bold;
-  color: #2c2c2c;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.form-card h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.form-card .subtitle {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
-.get-in-touch-section p {
-  font-size: 1.1rem;
-  color: #555;
+.form-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 12px;
   line-height: 1.6;
-  margin-bottom: 15px;
 }
 
-/* Form Styling */
-.form-container {
-  background: #E6D5BE;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  width: 90%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+.form-group {
+  margin-bottom: 16px;
 }
 
-form label {
+.form-group label {
+  display: block;
   font-weight: 600;
-  color: #000;
-  margin-top: 10px;
-  font-size: 1rem;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: #222;
 }
 
-input, textarea {
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
   width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  border-radius: 5px;
+  padding: 10px 12px;
   border: 1px solid #ccc;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
   font-family: 'Poppins', sans-serif;
+  background: #fff;
 }
 
-textarea {
-  height: 100px;
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 
-/* Form Checkbox Styling */
-.form-check {
-  margin-bottom: 10px;
+.check-group {
+  margin-bottom: 20px;
 }
 
-.form-check-label {
-  font-size: 1rem;
-  color: #2c2c2c;
-  font-weight: 500;
+.check-group p {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
 }
 
-/* Button Styling */
-button {
-  background-color: #009688; /* Stylish green */
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 5px;
+.check-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333;
   cursor: pointer;
-  margin-top: 15px;
-  transition: background 0.3s ease;
 }
 
-button:hover {
-  /*background-color: #00796B;*/
+.check-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
-/* Navbar & Header Styling */
-/*.page-header {*/
-/*  position: fixed;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  width: 100%;*/
-/*  height: 100px;*/
-/*  background-color: white;*/
-/*  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);*/
-/*  z-index: 1050;*/
-/*  display: flex;*/
-/*  justify-content: space-between;*/
-/*  align-items: center;*/
-/*  padding: 0 10px;*/
-/*}*/
+.submit-btn {
+  background: #009688;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.25s;
+}
 
-/*.header-icons {*/
-/*  display: flex;*/
-/*  gap: 1.5rem;*/
-/*  font-size: 1.5rem;*/
-/*  position: absolute;*/
-/*  right: 60px;*/
-/*  z-index: 1052;*/
-/*}*/
+.submit-btn:hover:not(:disabled) {
+  background: #00796b;
+}
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .form-container {
-    width: 100%;
-    padding: 20px;
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.alert-success {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.alert-error {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
   }
 
-  .get-in-touch-section {
-    padding: 20px;
-  }
-
-  button {
-    width: 100%;
+  .form-card {
+    padding: 24px;
   }
 }
