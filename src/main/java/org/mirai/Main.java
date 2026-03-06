@@ -5,7 +5,7 @@ package org.mirai;
    import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("org.mirai.controller")
+@ComponentScan("org.mirai")
 
 public class Main {
     public static void main(String[] args) {

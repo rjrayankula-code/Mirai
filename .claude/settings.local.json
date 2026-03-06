@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm start:*)",
+      "Bash(netstat:*)",
+      "Bash(cmd:*)",
+      "Bash(xargs wc:*)",
+      "Bash(mvn clean:*)",
+      "Bash(tasklist:*)",
+      "Bash(taskkill:*)",
+      "Bash(mvn spring-boot:run:*)",
+      "Bash(curl:*)",
+      "Bash(npx ng:*)"
+    ]
+  }
+}

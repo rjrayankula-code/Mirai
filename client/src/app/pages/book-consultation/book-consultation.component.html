@@ -1,0 +1,85 @@
+<section class="booking-section">
+  <div class="form-card">
+    <h1>Book a Consultation</h1>
+    <h2>Take the first step toward supporting your child's development.</h2>
+    <p class="subtitle">Fill in your details below and we'll get back to you to confirm your appointment.</p>
+
+    @if (submitted) {
+      <div class="alert-success">
+        <strong>Your booking request has been received!</strong><br>
+        We'll review your preferred date and time and reach out to confirm shortly.
+      </div>
+    }
+
+    @if (error) {
+      <div class="alert-error">{{ error }}</div>
+    }
+
+    @if (!submitted) {
+      <form (ngSubmit)="onSubmit()" #bookingForm="ngForm">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name"
+                   [(ngModel)]="formData.firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name"
+                   [(ngModel)]="formData.lastName" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Email"
+                   [(ngModel)]="formData.email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone"
+                   [(ngModel)]="formData.phone">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="serviceType">Service Type</label>
+          <select id="serviceType" name="serviceType" [(ngModel)]="formData.serviceType" required>
+            <option value="" disabled>Select a service</option>
+            <option value="Occupational Therapy">Occupational Therapy</option>
+            <option value="Motor Skills Development">Motor Skills Development</option>
+            <option value="Sensory Processing Support">Sensory Processing Support</option>
+            <option value="Cognitive Development">Cognitive Development</option>
+            <option value="One-time Consultation">One-time Consultation</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="preferredDate">Preferred Date</label>
+            <input type="date" id="preferredDate" name="preferredDate"
+                   [(ngModel)]="formData.preferredDate" required>
+          </div>
+          <div class="form-group">
+            <label for="preferredTime">Preferred Time</label>
+            <input type="time" id="preferredTime" name="preferredTime"
+                   [(ngModel)]="formData.preferredTime" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Additional Notes (optional)</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your child's needs or any questions you have..."
+                    [(ngModel)]="formData.notes"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" [disabled]="submitting || bookingForm.invalid">
+          @if (submitting) { Submitting... } @else { Book Consultation }
+        </button>
+      </form>
+    }
+  </div>
+</section>
